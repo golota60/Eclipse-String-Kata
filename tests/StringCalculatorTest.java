@@ -22,4 +22,20 @@ public class StringCalculatorTest {
       StringCalculator calc = new StringCalculator();
       assertEquals(3,calc.Add("1,2"));
    }
+
+   //2
+
+   @Test
+   public void secondTask1() {
+      StringCalculator calc = new StringCalculator();
+      assertEquals(6,calc.Add("1,2,3"));
+   }
+
+   @Test
+   public void secondTask2() {
+      StringCalculator calc = new StringCalculator();
+      assertEquals(10,calc.Add("1,2,3,4"));
+   }
+
+   
 }
