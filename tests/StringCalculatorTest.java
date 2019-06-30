@@ -37,7 +37,7 @@ public class StringCalculatorTest {
       assertEquals(10,calc.Add("1,2,3,4"));
    }
 
-//3
+   //3
 
    @Test
    public void thirdTask1() {
@@ -51,5 +51,17 @@ public class StringCalculatorTest {
       assertEquals(15,calc.Add("1\n2,3\n4,5"));
    }
 
+   //4
 
+   @Test
+   public void fourthTask1() {
+      StringCalculator calc = new StringCalculator();
+      assertEquals(15,calc.Add("//;\n1\n2;3\n4,5"));
+   }
+
+   @Test
+   public void fourthTask2() {
+      StringCalculator calc = new StringCalculator();
+      assertEquals(15,calc.Add("//;\n1\n2;3,4;5"));
+   }
 }
