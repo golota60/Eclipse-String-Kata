@@ -1,4 +1,6 @@
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.*;
 
@@ -64,4 +66,25 @@ public class StringCalculatorTest {
       StringCalculator calc = new StringCalculator();
       assertEquals(15,calc.Add("//;\n1\n2;3,4;5"));
    }
+
+   //5
+@Rule
+public ExpectedException exception = ExpectedException.none();
+
+   @Test
+   public void fifthTask1() throws IllegalArgumentException {
+      StringCalculator calc = new StringCalculator();
+      exception.expect(IllegalArgumentException.class);
+      exception.expectMessage("negatives not allowed: -2");
+      calc.Add("//;\n1\n-2;3,4;5");
+      }
+
+   @Test
+   public void fifthTask2() throws IllegalArgumentException {
+      StringCalculator calc = new StringCalculator();
+      exception.expect(IllegalArgumentException.class);
+      exception.expectMessage("negatives not allowed: -4");
+      calc.Add("1\n2,3,-4\n5");
+   }
+   
 }
