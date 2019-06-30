@@ -103,4 +103,19 @@ public ExpectedException exception = ExpectedException.none();
       assertEquals(6,calc.Add("//[***]\n1***2***3"));
    }
 
+   //8
+
+   @Test
+   public void eightTest1() {
+      StringCalculator calc = new StringCalculator();
+      assertEquals(6,calc.Add("//[*][%]\n1*2%3"));
+   }
+
+   //9
+
+   @Test
+   public void ninethTest1() {
+      StringCalculator calc = new StringCalculator();
+      assertEquals(6,calc.Add("//[**][%%%%]\n1**2%%%%3"));
+   }
 }
