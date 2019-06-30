@@ -95,4 +95,12 @@ public ExpectedException exception = ExpectedException.none();
       assertEquals(2,calc.Add("//;\n1001;2\n9999"));
    }
 
+   //7
+
+   @Test
+   public void seventhTest1() {
+      StringCalculator calc = new StringCalculator();
+      assertEquals(6,calc.Add("//[***]\n1***2***3"));
+   }
+
 }
