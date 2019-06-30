@@ -86,5 +86,13 @@ public ExpectedException exception = ExpectedException.none();
       exception.expectMessage("negatives not allowed: -4");
       calc.Add("1\n2,3,-4\n5");
    }
-   
+
+   //6
+
+   @Test
+   public void sixthTest1() {
+      StringCalculator calc = new StringCalculator();
+      assertEquals(2,calc.Add("//;\n1001;2\n9999"));
+   }
+
 }

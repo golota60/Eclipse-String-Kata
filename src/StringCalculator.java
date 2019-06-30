@@ -14,9 +14,13 @@ public class StringCalculator {
       int result = 0;
       String msg="";
       String split[] = str.split("\\n|,|" + delimiter); //using double backslash to detect \n
-      for (int i = split.length - 1; i >= 0; i--) { //if i have to display all the negatives, i have to iterate through whole array anyway
-         result += Integer.valueOf(split[i]);
-         if(Integer.valueOf(split[i])<0){
+      int asInt;
+      for (int i = split.length - 1; i >= 0; i--) {
+         asInt=Integer.valueOf(split[i]);
+         if(asInt<1000){
+            result += asInt;
+         }
+         if(asInt<0){
             msg+=split[i] + " ";
          }
       }
